@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Voice Translator</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-blue-900">
+    <div class="w-2/3 flex flex-col items-center justify-center gap-4">
+
+        <h1 class="text-7xl text-white font-bold py-5">Translate App</h1>
+        <div class="flex w-full">
+            <div class="card bg-base-300 rounded-box grid h-20 flex-grow place-items-center">
+                <select id="source-language" class="select select-primary w-full h-full"></select>
+            </div>
+            <div class="divider divider-horizontal"></div>
+            <div class="card bg-base-300 rounded-box grid h-20 flex-grow place-items-center">
+                <select id="target-language" class="select select-primary w-full h-full"></select>
+            </div>
+        </div>
+
+        <div class="relative flex w-full gap-2">
+            <div class="card bg-base-300 rounded-box flex-grow relative">
+                <textarea id="text-to-translate" class="textarea textarea-primary w-full h-32" placeholder="Type text..."></textarea>
+                <button id="speak-source" class="btn btn-circle btn-md absolute bottom-2 right-2">
+                    🔊
+                </button>
+            </div>
+
+            <div class="divider divider-horizontal"></div>
+
+            <div class="card bg-base-300 rounded-box flex-grow relative">
+                <textarea id="translated-text" class="textarea textarea-primary w-full h-32" disabled></textarea>
+                <button id="speak-translated" class="btn btn-circle btn-md absolute bottom-2 right-2" disabled>
+                    🔊
+                </button>
+            </div>
+        </div>
+
+        <button class="btn btn-accent" id="translate-button">Translate</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
